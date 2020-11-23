@@ -12,6 +12,9 @@ form.submit(function( event ) {
   });
 
 
+
+//This is the truncate function
+
   function truncateStr( str, charNum, SetWordBoundary ){
     if (str.length <= charNum) { return str; }
     const subString = str.substr(0, charNum); // the original check
