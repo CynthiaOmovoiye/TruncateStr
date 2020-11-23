@@ -4,7 +4,7 @@ form.submit(function( event ) {
    var string = $('#text').val();
    var charNum = $('#chars').val();
    var SetWordBoundary= parseInt($('#boundary').val());
-   var shortenedString= truncateString(string, charNum, SetWordBoundary);
+   var shortenedString= truncateStr(string, charNum, SetWordBoundary);
    var result = $('#result');
    result.html('Result: '+shortenedString);
 
@@ -12,7 +12,7 @@ form.submit(function( event ) {
   });
 
 
-  function truncateString( str, charNum, SetWordBoundary ){
+  function truncateStr( str, charNum, SetWordBoundary ){
     if (str.length <= charNum) { return str; }
     const subString = str.substr(0, charNum); // the original check
     return (SetWordBoundary 
